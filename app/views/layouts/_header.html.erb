@@ -1,0 +1,43 @@
+
+<header>
+  <a href=#><i class="fab fa-facebook"></i></a>
+<div id = "topright">
+  <form class="form-inline" style= "display:inline">
+    <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
+    <button class="fas fa-search" type="submit"></button>
+  </form>
+  <a href=# style= "display:inline">SIGN IN</a>
+  <a href=# style= "display:inline">VIEW CART</a>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to root_path do %>
+  <%= image_tag("UTVgraphicBrown.png", :alt => "Lugnuts UTV Supply", id: "logo") %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/articles">Articles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+<div id = "helparea">
+  <a href=# style= "display:inline">CUSTOMER SERVICE: 1-800-989-5387</a>
+  <a href=# style= "display:inline">LIVE CHAT</a>
+  <a href=# style= "display:inline">CONTACT US</a>
+</nav>
