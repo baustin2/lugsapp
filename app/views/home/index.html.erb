@@ -1,3 +1,121 @@
 <%= render 'layouts/header' %>
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lugs</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<div class="row" id="heroRow">
+		<div class="hero-image">
+			<div class="hero-text">
+				<h1>OVER 50 YEARS OF EXCEPTIONAL SERVICE</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="featuredProductsRow">
+		<div class="col-md-6">
+			<div class="card" id="featuredProductsCard">
+				<img class="card-img-top" src="wholesaleParts.jpg" alt="Featured Products Card">
+				<div class="card-body">
+					<h4><a href="">Featured Products</a></h4>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card" id="featuredProduct1">
+				<img class="card-img-top" src="rim.jpg" alt="First Featured Product">
+				<div class="card-body">
+					<h4><a href="/products/S10_1678">Featured #1</a></h4>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card" id="featuredProduct2">
+				<img class="card-img-top" src="bar.png" alt="Second Featured Product">
+				<div class="card-body">
+					<h4><a href="/products/S10_2016">Featured #2</a></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="typeContainer">
+		<div class="row" id="selectRow">
+			<div id="selectDiv">
+				<h2>Select UTV By Type</h2>
+			</div>
+		</div>
+		<div class="row" id="typeRow">
+			<div class="col-sm-4">
+				<div class="card" id="featuredProduct2">
+					<img class="card-img-top" src="ss_before.jpg" alt="Second Featured Product">
+					<div class="card-body">
+						<h4><a href="/products">Multi-Use</a></h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card" id="featuredProduct2">
+					<img class="card-img-top" src="util.jpg" alt="Second Featured Product">
+					<div class="card-body">
+						<h4><a href="/products">Utility</a></h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card" id="featuredProduct2">
+					<img class="card-img-top" src="sport.jpg" alt="Second Featured Product">
+					<div class="card-body">
+						<h4><a href="/products">Sport</a></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="projectsRow">
+		<h2>Featured Customer Projects</h2>
+		<div class="col-md-6">
+			<div class="card">
+				<img class="card-img-top" src="fix1.jpg" alt="Post 1 Image">
+				<div class="card-body">
+					<h4><a href="/articles/1">Customer Project 1</a></h4>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="card">
+				<img class="card-img-top" src="suspense.jpeg" alt="Post 2 Image">
+				<div class="card-body">
+					<h4><a href="/articles/3">Customer Project 2</a></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="storyContainer">
+		<div class="row" id="storyRow">
+			<h2>'Our Story' With Strong Customer Focus Statement</h2>
+			<div class="col-md-6">
+				<img src="staff.jpg" alt="Company Photo">
+			</div>
+			<div class="col-md-6" id="companyText">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity=sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<%= render 'layouts/footer' %>

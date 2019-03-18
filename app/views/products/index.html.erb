@@ -1,6 +1,36 @@
 <%= render 'layouts/header' %>
 <p id="notice"><%= notice %></p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="/products">Products</a></li>
+  </ol>
+</nav>
+<br>
 
+
+
+
+<% @products.in_groups_of(4, false).each do |group| %>
+  <div class='row' style = "margin-bottom: 30px">
+    <% group.each do |product| %>
+      <div class='col-md-3' style = "border-style:solid; border-width: 1px; padding: 20px;">
+        <%= image_tag("towing.jpg", :alt => "towing part", id: "towing part") %>
+
+        <br>
+        <div>MSRP: <%= number_to_currency(product.MSRP) %></div>
+<div>Your Price: <%= number_to_currency(product.buyPrice) %></div>
+<h6><%= link_to 'MORE INFO', product %></h6>
+<br>
+<h5 style="background-color: #4f7942;color:white;padding: 5px;"><%= product.productName.upcase %></h5>
+<br>
+<%= button_to 'Add to Cart', class: 'btn btn-info btn-sm', remote: true %><br>
+<%= button_to 'Add to Wishlist', class: 'btn btn-info btn-sm', remote: true %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<% if false %>
 <h1>Products</h1>
 
 <table>
@@ -25,3 +55,7 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+
+<% end %>
+
+<%= render 'layouts/footer' %>

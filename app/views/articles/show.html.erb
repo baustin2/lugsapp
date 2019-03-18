@@ -1,14 +1,64 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<%= render 'layouts/header' %>
+<p id="notice"><%= notice %></p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Customer Projects</li>
+  </ol>
+</nav>
+<h1><%= @article.title %></h1>
+<br>
 
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
+      <div style="width: 95%; height: 450px; margin-top: 30px">
+        <div style="width: 45%;height:100%; display:inline-block;padding: 30px;border-style: solid; border-width: 1px;">
+        <%= image_tag("fix2.jpg", :alt => "towing part", id: "towing part") %>
+</div>
+        <div style="vertical-align: top;margin-left: 40px; height: 100%;display:inline-block;width: 45%;padding: 30px;border-style: solid; border-width: 1px;background-color: #E8E8E8">
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+
+        <p>Project Details: <%= @article.body %></p>
+
+        </div>
+</div>
+<%# link_to 'Project Details', article %>
+<br>
+
+
+<br>
+<h5 style= "text-align:center"><%= link_to 'Submit Your Own Project', new_article_path %></h5>
+
+
+
+<% if false %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.body %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %><% end %>
+
+
+<h5><%= link_to 'Back', articles_path %></h5>
+
+<%= render 'layouts/footer' %>

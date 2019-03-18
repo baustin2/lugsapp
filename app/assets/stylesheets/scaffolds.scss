@@ -20,18 +20,18 @@ pre {
   font-size: 11px;
 }
 
-/*a {
-  color: #000;
+a {
+  color: #4f7942;
 
   &:visited {
-    color: #666;
+    color: #4f7942;
   }
 
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}*/
+  /*&:hover {
+    color: #000000;
+    background-color: #e8e8e8;
+  }*/
+}
 
 th {
   padding-bottom: 5px;
@@ -104,3 +104,5 @@ nav {width: 100%}
 #helparea {float:right;}
 
 #helparea > a {color:black;padding-left:10px;padding-right: 10px;}
+
+h5, h6, h4, h3, h2, h1 {color:#776c47; font-weight: 700}

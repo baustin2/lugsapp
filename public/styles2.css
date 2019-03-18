@@ -1,0 +1,150 @@
+/*
+
+styles.css for contact page
+
+$primary-green: #4F7942;
+$secondary-gray: #808080;
+$accent-brown: #776C47;
+
+*/
+
+body h1,h2,h3,h4,h5 {
+	font-family: Open Sans;
+}
+
+body p {
+	font-family: Minion Pro;
+}
+
+div.container {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+.row {
+	padding-top: 5px;
+}
+
+#assistHead {
+	text-align: center;
+	font: bold 48px/1.5 Open Sans;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #776C47;
+}
+
+#tilesContainer {
+	width: 100%;
+	position: relative;
+	height: 500px;
+	background-color: Gainsboro;
+}
+
+#contactHead {
+	padding-top: 30px;
+	text-align: center;
+	color: #776C47;
+}
+
+#tilesDiv {
+	position: relative;
+	height: 80%;
+	padding: 5px;
+}
+
+#telDiv {
+	height: 80%;
+	margin: 20px;
+	background-color: white;
+	text-align: center;
+
+}
+
+#telDiv a {
+	color: #776C47;
+	font: bold 26px/1.5 Open Sans;
+	position: relative;
+	top: 50%;
+}
+
+#infoDiv {
+	height: 80%;
+	margin: 20px;
+	background-color: white;
+	text-align: center;
+}
+
+#infoDiv a {
+	color: #776C47;
+	font: bold 26px/1.5 Open Sans;
+	position: relative;
+	top: 50%;
+	word-wrap: break-word;
+}
+
+#socMedDiv {
+	height: 80%;
+	margin: 20px;
+	background-color: white;
+	text-align: center;
+}
+
+#socMedDiv a {
+	color: #776C47;
+	position: relative;
+	top: 50%;
+}
+
+#socMedDiv a:hover {
+	text-decoration: none;
+	opacity: 0.7;
+}
+
+#socMedDiv.fa {
+	padding: 20px;
+	font-size: 30px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+}
+
+#liveChatDiv {
+	height: 80%;
+	margin: 20px;
+	background-color: white;
+	text-align: center;
+}
+
+#liveChatDiv img {
+	width: 100%;
+	margin-top: 50%;
+	margin-bottom: 50%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#formRow {
+	width: 95%;
+	margin: auto;
+	padding-top: 10px;
+}
+
+#map  iframe {
+	padding:5px;
+}
+
+#contactForm label {
+	padding: 5px;
+}
+
+#contactForm input {
+	width: 100%;
+	padding: 5px;
+}
+
+#contactForm textarea {
+	width: 100%;
+}

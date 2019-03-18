@@ -1,5 +1,44 @@
 <%= render 'layouts/header' %>
 <p id="notice"><%= notice %></p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/products">Products</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= @product.productName %></li>
+  </ol>
+</nav>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<br>
+<h3 style="font-weight: 700;"><%= @product.productName.upcase %></h3><br>
+<div style="width: 100%; height: 550px;margin-left: 50px">
+<div style="width: 55%;height: 100%;display:inline-block;padding: 30px;border-style: solid; border-width: 1px;">
+<%= image_tag("large towing2.jpg", :alt => "towing part", id: "towing part") %>
+</div>
+<div style="vertical-align: top;height: 100%;margin-left: 40px;display:inline-block;width: 35%;padding: 30px;border-style: solid; border-width: 1px;background-color: #E8E8E8">
+<h5>ITEM NUMBER: <%= @product.productCode %></h5>
+<h5>Vendor: <%= @product.productVendor%></h5>
+<h5>Part Category: <%= @product.productLine%></h5>
+<h5>MSRP: <%= number_to_currency(@product.MSRP) %></h5>
+<h5>YOUR PRICE: <%= number_to_currency(@product.buyPrice) %></h5>
+<h5 style="vertical-align: top;background-color: #4f7942;color:white;padding: 5px;"><a style = "color:white" href="/contact">Questions? Contact Us</a></h5>
+<br><br>
+<form action="#">
+  Quantity:
+  <input type="number" name="quantity" min="1" max="10000">
+
+</form>
+<br>
+<%= button_to 'Add to Cart', class: 'btn btn-info btn-sm', remote: true %>
+<br>
+<%= button_to 'Add to Wishlist', class: 'btn btn-info btn-sm', remote: true %>
+</div>
+</div>
+<br>
+<br>
+<h6 style="background-color: #e8e8e8;padding: 30px;width: 90%; margin: 0 auto"><%= sanitize(@product.productDescription) %></h6>
+
+<%# link_to 'Edit', edit_product_path(@product) %>
+<br>
+<br>
+
+<h5><%= link_to 'Back', products_path %></h5>
+<%= render 'layouts/footer' %>

@@ -1,8 +1,39 @@
 <%= render 'layouts/header' %>
 <p id="notice"><%= notice %></p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Customer Projects</li>
+  </ol>
+</nav>
+<h1>Customer Projects</h1>
+<br>
+<% @articles.in_groups_of(4, false).each do |group| %>
+  <div style= "float:left;">
+    <% group.each do |article| %>
+    <div>
 
-<h1>Articles</h1>
 
+        <div style="display:inline-block;margin: 20px;padding: 30px;border-style: solid; border-width: 1px;background-color: #E8E8E8">
+<%= image_tag("fix2.jpg", :alt => "towing part", id: "towing part") %>
+        <h6>Project Name: <%= article.title %></h6>
+        <h6><%= link_to 'READ ARTICLE', article %></h6>
+
+        </div>
+</div>
+<%# link_to 'Project Details', article %>
+<br>
+
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<br>
+<h5 style= "text-align:center"><%= link_to 'Submit Your Own Project', new_article_path %></h5>
+
+
+
+<% if false %>
 <table>
   <thead>
     <tr>
@@ -27,4 +58,6 @@
 
 <br>
 
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'New Article', new_article_path %><% end %>
+
+<%= render 'layouts/footer' %>

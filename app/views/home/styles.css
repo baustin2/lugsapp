@@ -1,0 +1,131 @@
+/*homepage css
+
+$primary-green: #4F7942;
+$secondary-gray: #808080;
+$accent-brown: #776C47;
+
+*/
+body h1,h2,h3,h4,h5 {
+	font-family: Open Sans;
+	text-transform: uppercase;
+}
+
+body p {
+	font-family: minion-pro-regular, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+div.container {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+#heroRow {
+	margin-bottom: 25px;
+}
+
+
+.hero-image {
+	background-image: url('maxresdefault.jpg');
+	height: 360px;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hero-text {
+	height: 100%;
+	color: white;
+}
+
+#featuredProductsRow {
+	margin: auto;
+	width: 80%;
+}
+
+#featuredProductsRow img {
+	height: 200px;
+}
+
+.card-body {
+	background-color: #4F7942;
+	text-align: center;
+}
+
+.card-body a {
+	color: white;
+	text-decoration: none;
+}
+
+.card-body a:hover {
+	color: white;
+	text-shadow: 2px 2px #808080;
+	text-decoration: none;
+}
+
+#typeContainer {
+	width: 100%;
+	background-color: Gainsboro;
+	height: 500px;
+	margin-top: 25px;
+}
+
+#selectDiv {
+	margin: auto;
+	color: #776C47;
+}
+
+#typeRow {
+	margin: 10px;
+}
+
+#typeRow img {
+	height: 250px;
+	width: 100%;
+	margin: auto;
+}
+
+#projectsRow {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#projectsRow h2 {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 25px;
+	color: #776C47;
+}
+
+#projectsRow img {
+	height: 400px;
+}
+
+#storyContainer {
+	background-color: Gainsboro;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+#storyContainer h2 {
+	margin: auto;
+	color: #776C47;
+}
+
+#storyContainer img {
+	width: 70%;
+	margin-left: 25%;
+	margin-bottom: 10px;
+}
+
+#companyText {
+	background-color: #EBEBEB;
+	margin: auto;
+	padding: 10px;
+	width: 80%;
+}
