@@ -1,0 +1,25 @@
+<%= render 'layouts/header' %>
+<br>
+<h3>Search Results</h3>
+
+
+    <% @results.in_groups_of(4, false).each do |group| %>
+      <div class='row' style = "margin-bottom: 30px">
+        <% group.each do |result| %>
+          <div class='col-md-3' style = "border-style:solid; border-width: 1px; padding: 20px;">
+            <%= image_tag("towing.jpg", :alt => "towing part", id: "towing part") %>
+
+            <br>
+            <div>MSRP: <%= number_to_currency(result.MSRP) %></div>
+    <div>Your Price: <%= number_to_currency(result.buyPrice) %></div>
+    <h6><a href="products/<%=result.productCode %>""</a>MORE INFO</h6>
+    <br>
+    <h5 style="background-color: #4f7942;color:white;padding: 5px;"><%= result.productName.upcase %></h5>
+    <br>
+    <%= button_to 'Add to Cart', class: 'btn btn-info btn-sm', remote: true %><br>
+    <%= button_to 'Add to Wishlist', class: 'btn btn-info btn-sm', remote: true %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+<%= render 'layouts/footer' %>

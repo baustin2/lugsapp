@@ -10,7 +10,7 @@
 
 
 
-
+<%= will_paginate @products %>
 <% @products.in_groups_of(4, false).each do |group| %>
   <div class='row' style = "margin-bottom: 30px">
     <% group.each do |product| %>
@@ -30,6 +30,7 @@
     <% end %>
   </div>
 <% end %>
+<%= will_paginate @products %>
 <% if false %>
 <h1>Products</h1>
 

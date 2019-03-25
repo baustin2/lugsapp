@@ -2,14 +2,12 @@
 <header>
   <a href=#><i class="fab fa-facebook"></i></a>
 <div id = "topright">
-  <form class="form-inline" style= "display:inline">
-    <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
-    <button class="fas fa-search" type="submit"></button>
-  </form>
   <a href=# style= "display:inline">SIGN IN</a>
   <a href=# style= "display:inline">VIEW CART</a>
   </div>
 </header>
+
+
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <%= link_to root_path do %>
@@ -23,18 +21,30 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">HOME<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/products">Products</a>
+        <a class="nav-link" href="/products">PRODUCTS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/articles">Articles</a>
+        <a class="nav-link" href="/articles">CUSTOMER BLOG</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/contact">Contact Us</a>
+        <a class="nav-link" href="/contact">CONTACT US</a>
       </li>
     </ul>
+  </div>
+  <div style="padding-top:20px;padding-right: 20px;width: 25%">
+    <%= form_tag(search_page_path, :method => "get",
+      class: 'navbar-form navbar-left') do %>
+    <div class="input-group">
+      <%= search_field_tag :search, params[:search], placeholder: "Product Search", class: "form-control" %>
+      <div class="input-group-btn">
+        <%= button_tag "", :class => 'fas fa-search',:name => nil%>
+      </div>
+    </div>
+  <% end %>
+  <p>Find the part you need by name, description, vendor, vehicle type, or code </p>
   </div>
 <div id = "helparea">
   <a href=# style= "display:inline">CUSTOMER SERVICE: 1-800-989-5387</a>

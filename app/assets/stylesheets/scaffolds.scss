@@ -91,7 +91,7 @@ header{
   color:white;
 }
 
-#topright {padding:5px;float:right;}
+#topright {padding:5px;float:right}
 
 i{font-size: 24px; padding: 5px; color:white}
 
@@ -106,3 +106,9 @@ nav {width: 100%}
 #helparea > a {color:black;padding-left:10px;padding-right: 10px;}
 
 h5, h6, h4, h3, h2, h1 {color:#776c47; font-weight: 700}
+
+.fas.fa-search {font-size:16px}
+
+.previous-page,.next-page,.current,.pagination > a {padding:10px}
+
+.pagination {display:block;width: 30%;margin: 0 auto; padding-bottom:20px}
