@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   get '/search' => 'pages#search', :as => 'search_page'
   resources :articles
   resources :contact
