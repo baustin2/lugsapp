@@ -1,0 +1,61 @@
+<h1>Your Account Details</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Full Name:</strong>
+  <%= @customer.customerName %>
+</p>
+
+<p>
+  <strong>First Name:</strong>
+  <%= @customer.contactFirstName %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @customer.contactLastName %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @customer.phone %>
+</p>
+
+<p>
+  <strong>Address Line 1:</strong>
+  <%= @customer.addressLine1 %>
+</p>
+
+<p>
+  <strong>Address Line 2:</strong>
+  <%= @customer.addressLine2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @customer.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @customer.state %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @customer.postalCode %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @customer.country %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<%= link_to 'Edit Account Details', edit_customer_path(@customer) %> |
+<%= link_to 'Home Page', root_path%>

@@ -1,0 +1,15 @@
+<%= render 'layouts/header' %>
+<h2> Your Cart </h2>
+<div class='row' style = "margin-bottom: 30px">
+<% if @orderdetails.any? %>
+  <% @orderdetails.each do |detail| %>
+  <div class='col-md-3' style = "border-style:solid; border-width: 1px; padding: 20px;">
+    <p><%= image_tag("towing.jpg", :alt => "towing part", id: "towing_part") %> <%= detail.productName %> | <%= detail.productCode %> | <%= link_to "Delete", orderdetail_path(detail), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+    <p> Unit Price: <%= number_to_currency detail.priceEach %> | Quantity: <%= detail.quantityOrdered %> | Total Price: <%= number_to_currency (detail.priceEach * detail.quantityOrdered) %></p></div>
+  <% end %>
+<% else %>
+  <p>Your shopping cart is empty.</p>
+<% end %>
+</div>
+<h5>Your Total: <%= number_to_currency current_order.total_price %></h5>
+<%= render 'layouts/footer' %>

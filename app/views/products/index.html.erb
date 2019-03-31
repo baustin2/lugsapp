@@ -7,56 +7,29 @@
   </ol>
 </nav>
 <br>
-
-
-
 <%= will_paginate @products %>
-<% @products.in_groups_of(4, false).each do |group| %>
-  <div class='row' style = "margin-bottom: 30px">
-    <% group.each do |product| %>
-      <div class='col-md-3' style = "border-style:solid; border-width: 1px; padding: 20px;">
-        <%= image_tag("towing.jpg", :alt => "towing part", id: "towing part") %>
-
-        <br>
-        <div>MSRP: <%= number_to_currency(product.MSRP) %></div>
+<div class='row' style = "margin-bottom: 30px">
+<% @products.each do |product| %>
+<div class='col-md-3' style = "border-style:solid; border-width: 1px; padding: 20px;">
+  <%= image_tag("towing.jpg", :alt => "towing part", id: "towing_part") %>
+  <div>MSRP: <%= number_to_currency(product.MSRP) %></div>
 <div>Your Price: <%= number_to_currency(product.buyPrice) %></div>
 <h6><%= link_to 'MORE INFO', product %></h6>
 <br>
 <h5 style="background-color: #4f7942;color:white;padding: 5px;"><%= product.productName.upcase %></h5>
 <br>
-<%= button_to 'Add to Cart', class: 'btn btn-info btn-sm', remote: true %><br>
-<%= button_to 'Add to Wishlist', class: 'btn btn-info btn-sm', remote: true %>
-      </div>
-    <% end %>
-  </div>
+ <%= form_for @orderdetail do |f| %>
+<%= f.hidden_field :productName, value: product.productName %>
+   <%= f.hidden_field :productCode, value: product.productCode %>
+   <p>Quantity: <%= f.number_field :quantityOrdered %></p>
+   <%= f.hidden_field :priceEach, value: product.buyPrice %>
+   <%= f.submit "Add to cart" %>
+ <% end %>
+ </div>
 <% end %>
+</div>
 <%= will_paginate @products %>
-<% if false %>
-<h1>Products</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%=product.productName%></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
-
-<% end %>
 
 <%= render 'layouts/footer' %>

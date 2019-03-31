@@ -5,11 +5,13 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all.paginate(page: params[:page], per_page: 16)
+    @orderdetail = current_order.orderdetails.new
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @orderdetail = current_order.orderdetails.new
   end
 
   # GET /products/new
