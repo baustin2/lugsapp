@@ -1,4 +1,5 @@
 <%= render 'layouts/header' %>
+
 <p id="notice"><%= notice %></p>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -21,7 +22,7 @@
  <%= form_for @orderdetail do |f| %>
 <%= f.hidden_field :productName, value: product.productName %>
    <%= f.hidden_field :productCode, value: product.productCode %>
-   <p>Quantity: <%= f.number_field :quantityOrdered %></p>
+   <p>Quantity: <%= f.number_field :quantityOrdered, placeholder: "1", :value => @defvalue %></p>
    <%= f.hidden_field :priceEach, value: product.buyPrice %>
    <%= f.submit "Add to cart" %>
  <% end %>

@@ -6,12 +6,14 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all.paginate(page: params[:page], per_page: 16)
     @orderdetail = current_order.orderdetails.new
+    @defvalue = 1
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
     @orderdetail = current_order.orderdetails.new
+    @defvalue = 1
   end
 
   # GET /products/new

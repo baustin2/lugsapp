@@ -24,7 +24,7 @@
 <%= form_for @orderdetail do |f| %>
 <%= f.hidden_field :productName, value: @product.productName %>
   <%= f.hidden_field :productCode, value: @product.productCode %>
-  <p>Quantity: <%= f.number_field :quantityOrdered %></p>
+  <p>Quantity: <%= f.number_field :quantityOrdered, placeholder: "1", :value => @defvalue %></p>
   <%= f.hidden_field :priceEach, value: @product.buyPrice %>
   <%= f.submit "Add to cart" %>
 <% end %>
