@@ -5,7 +5,7 @@ class LoginsController < ApplicationController
     customer = Customer.find_by(email: params[:logins][:email].downcase)
     session[:customer_customerNumber] = customer.customerNumber
     if customer && customer.authenticate(params[:logins][:password])
-      flash.notice = "You are now logged in"
+      flash.notice = "You are now logged in."
       redirect_to customer
     else
       render 'new'
