@@ -198,7 +198,7 @@ CREATE TABLE `orderdetails` (
   `order_id` int(11) NOT NULL,
   `productCode` varchar(15) NOT NULL,
   `quantityOrdered` int(11) NOT NULL,
-  `priceEach` decimal(10,2) NOT NULL,
+  `priceEach` decimal(10,2) NOT NULL DEFAULT "1",
   `orderLineNumber` smallint(6) DEFAULT NULL,
   `productName` varchar(70) NOT NULL,
   PRIMARY KEY (`id`),
