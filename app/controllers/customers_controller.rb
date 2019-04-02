@@ -10,6 +10,7 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
+    @customer = Customer.find(params[:customerNumber])
   end
 
   # GET /customers/new
