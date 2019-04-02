@@ -1,10 +1,7 @@
 
 <h1> Login </h1>
+<br><%= link_to 'Need an account? Click to create an account', new_customer_path(@customer) %><br>
 <%= form_for(:logins, local: true) do |form| %>
-<br>
-<%= link_to 'Need an account? Click to create an account', new_customer_path(@customer) %>
-<br>
-<br>
   <div class="field">
     <%= form.label :email %>
     <%= form.email_field :email %>
