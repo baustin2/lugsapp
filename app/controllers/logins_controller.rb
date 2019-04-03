@@ -2,11 +2,13 @@ class LoginsController < ApplicationController
   def new
   end
   def create
-    customer = Customer.find_by(email: params[:logins][:email].downcase)
+    customer = Customer.find_by_email(params[:email])
+  # If the user exists AND the password entered is correct.
+  if customer && customer.authenticate(params[:password])
+    # Save the user id inside the browser cookie. This is how we keep the user
+    # logged in when they navigate around our website.
     session[:customer_customerNumber] = customer.customerNumber
-    if customer && customer.authenticate(params[:password])
-      flash.notice = "You are now logged in."
-      redirect_to customer
+    redirect_to customer
     else
       render 'new'
       flash.notice = "Bad login"
