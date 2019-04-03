@@ -5,7 +5,7 @@
   <p style= "display:inline; color:white"><% if current_user %>
   Signed in as <%= current_user.customerName %> | <%= link_to "LOGOUT", logout_path, method: :delete %>
 <% else %>
-  <%= link_to "LOGIN", login_path %> | <%= link_to 'Signup', '/customers/new' %>
+  <%= link_to "LOGIN", login_path %> | <%= link_to 'SIGNUP', '/customers/new' %>
 <% end %>
 </p>
   <a href=/cart style= "display:inline">VIEW CART</a>
