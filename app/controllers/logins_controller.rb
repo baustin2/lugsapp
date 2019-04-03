@@ -8,8 +8,7 @@ class LoginsController < ApplicationController
       flash.notice = "You are now logged in."
       redirect_to customer
     else
-      render 'new'
-      flash.notice = "Bad login"
+    redirect_to '/login'
     end
   end
   def destroy
