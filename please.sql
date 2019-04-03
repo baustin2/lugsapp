@@ -110,7 +110,7 @@ CREATE TABLE `customers` (
   `salesRepEmployeeNumber` int(11) DEFAULT NULL,
   `creditLimit` decimal(10,2) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
-  `password_digest` text,
+  `password_digest` text DEFAULT NULL,
   PRIMARY KEY (`customerNumber`),
   KEY `salesRepEmployeeNumber` (`salesRepEmployeeNumber`),
   CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`salesRepEmployeeNumber`) REFERENCES `employees` (`employeenumber`)
