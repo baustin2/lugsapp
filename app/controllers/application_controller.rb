@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-helper_method :current_user, :logged_in?, :current_order
+helper_method :current_user, :logged_in?
+helper_method :current_order
 def current_user
   @current_user ||= Customer.find(session[:customer_customerNumber]) if session[:customer_customerNumber]
 end
