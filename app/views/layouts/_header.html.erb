@@ -3,7 +3,7 @@
 <div id = "topright">
   <a href="/customers/new" style= "display:inline">CREATE ACCOUNT</a>
   <p style= "display:inline; color:white"><% if current_user %>
-  Signed in as <%= current_user.name %> | <%= link_to "LOGOUT", logout_path, method: :delete %>
+  Signed in as <%= current_user.customerName %> | <%= link_to "LOGOUT", logout_path, method: :delete %>
 <% else %>
   <%= link_to "LOGIN", login_path %> | <%= link_to 'Signup', '/customers/new' %>
 <% end %>
