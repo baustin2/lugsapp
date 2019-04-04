@@ -1,82 +1,95 @@
 
+<div class="row justify-content-center">
+  <%= form_with(model: customer, local: true) do |form| %>
+    <% if customer.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(student.errors.count, "error") %> prohibited this customer from being saved:  </h2>
+  
+        <ul>
+        <% customer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+</div>
 
-<%= form_with(model: customer, local: true) do |form| %>
-  <% if customer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(student.errors.count, "error") %> prohibited this customer from being saved:</h2>
 
-      <ul>
-      <% customer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
-
-
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :full_name %>
     <%= form.text_field :customerName %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :first_name %>
     <%= form.text_field :contactFirstName %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :last_name %>
     <%= form.text_field :contactLastName %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :phone %>
     <%= form.text_field :phone %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :address_line_1 %>
     <%= form.text_field :addressLine1%>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :address_line_2 %>
     <%= form.text_field :addressline2 %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :city %>
     <%= form.text_field :city %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :state %>
     <%= form.text_field :state %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :postalCode %>
     <%= form.text_field :postalCode%>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :country%>
     <%= form.text_field :country %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :email %>
     <%= form.email_field :email %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="field">
     <%= form.label :password %>
     <%= form.password_field :password %>
   </div>
-
+</div>
+<div class="row justify-content-center">
   <div class="actions">
-    <%= form.submit "Create Account" %>
+    <%= form.submit "Create Account", {:style=>'background-color:#4F7942; color:white;', :class => "btn"} %>
   </div>
+</div>
 <% end %>

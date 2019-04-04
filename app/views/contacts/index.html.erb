@@ -6,7 +6,7 @@
 <html>
 <head>
 	<title>Lugs Contact</title>
-	<link rel="stylesheet" type="text/css" href="styles2.css">
+	<link rel="stylesheet" type="text/css" href="contacts.scss">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,27 +23,22 @@
 	<div id="tilesContainer">
 		<h3 id="contactHead">Contact Us With Any Questions or Comments 24/7</h3>
 		<div class="row" id="tilesDiv">
-			<div class="col-md-3">
+			<div class="col-md-4">
 				<div id="telDiv">
-					<a href="tel:800-955-5555">800-955-5555</a>
+					<a href="tel:1-800-989-5387" title="Open Telephone">1-800-989-5387</a>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-4">
 				<div id="infoDiv">
-					<a href="">info@<br>lugnuts.com</a>
+					<a href="#contactForm" title="Open Mail">info@lugnuts.com</a>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-4">
 				<div id="socMedDiv">
-					<a href="#" class="fa fa-linkedin"></a>
-					<a href="#" class="fa fa-instagram"></a>
-					<a href="#" class="fa fa-twitter"></a>
-					<a href="#" class="fa fa-facebook"></a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div id="liveChatDiv">
-					<a href="#"><img src="liveChat.png"></a>
+					<a href="https://www.linkedin.com" target="_blank" class="fa fa-linkedin fa-3x"></a>
+					<a href="https://www.instagram.com" target="_blank" class="fa fa-instagram fa-3x"></a>
+					<a href="https://www.twitter.com" target="_blank" class="fa fa-twitter fa-3x"></a>
+					<a href="https://www.facebook.com" target="_blank" class="fa fa-facebook fa-3x"></a>
 				</div>
 			</div>
 		</div>
@@ -51,11 +46,11 @@
 	<div class="row" id="formRow">
 		<div class="col-md-6">
 			<div id="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3964.5501017301435!2d-82.98873675122273!3d39.9667514107416!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1552751353070" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3964.5501017301435!2d-82.98873675122273!3d39.9667514107416!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1552751353070" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>
     <div class="col-md-6">
-      <div>
+      <div id="contactForm">
         <h1>Contact Us</h1>
 
         <%= render 'form', contact: @contact %>

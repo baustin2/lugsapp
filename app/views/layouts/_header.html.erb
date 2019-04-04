@@ -1,10 +1,13 @@
 <header>
-  <a href=#><i class="fab fa-facebook"></i></a>
+  <a href="https://www.facebook.com" title="Facebook"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="https://www.linkedin.com" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
 <div id = "topright">
 <p style= "display:inline; color:white"><% if current_user %>
   Signed in as <%= current_user.customerName %> | <%= link_to "LOGOUT", logout_path, method: :delete %>
 <% else %>
-  <%= link_to "LOGIN", login_path %> | <%= link_to 'SIGNUP', '/customers/new' %>
+  <%= link_to "LOGIN", login_path, {:style=>'color:white;font:16px sans-serif'} %> | <%= link_to 'SIGNUP', '/customers/new',  {:style=>'color:white;font:16px sans-serif'} %>
 <% end %>
 </p>
   <a href=/cart style= "display:inline">VIEW CART</a>
@@ -25,16 +28,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">HOME<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/" title="Home Page">HOME<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/products">PRODUCTS</a>
+        <a class="nav-link" href="/products" title="Products Page">PRODUCTS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/articles">CUSTOMER BLOG</a>
+        <a class="nav-link" href="/articles" title="Customer Articles Page">CUSTOMER BLOG</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/contacts">CONTACT US</a>
+        <a class="nav-link" href="/contacts" title="Contact Page">CONTACT US</a>
       </li>
     </ul>
   </div>
@@ -44,13 +47,13 @@
     <div class="input-group">
       <%= search_field_tag :search, params[:search], placeholder: "Product Search", class: "form-control" %>
       <div class="input-group-btn">
-        <%= button_tag "", :class => 'fas fa-search',:name => nil%>
+        <%= button_tag "", {:style=>'font-size:30px; background-color:#4F7942; color:white;', :class => 'fas fa-search', :name => nil, :title=>'Search'} %>
       </div>
     </div>
   <% end %>
-  <p>Find the part you need by name, description, vendor, vehicle type, or code </p>
+  <p style="font:12px sans-serif">Find the part you need by name, description, vendor, vehicle type, or code </p>
   </div>
 <div id = "helparea">
-  <a href="tel:+18009895387" style= "display:inline">CUSTOMER SERVICE: 1-800-989-5387</a>
-  <a href=/contacts style= "display:inline">CONTACT US</a></div>
+  <a href="tel:+18009895387" style= "display:inline" title="Open Telephone">CUSTOMER SERVICE: 1-800-989-5387</a>
+  <a href=/contacts style= "display:inline" title="Contact Page">CONTACT US</a></div>
 </nav>

@@ -6,7 +6,7 @@
     <li class="breadcrumb-item active" aria-current="page">Customer Projects</li>
   </ol>
 </nav>
-<h1>Customer Projects</h1>
+<h1 style="font-family:Open Sans, sans-serif">Customer Projects</h1>
 <br>
 <% @articles.in_groups_of(4, false).each do |group| %>
   <div style= "float:left;">
@@ -29,7 +29,7 @@
   </div>
 <% end %>
 <br>
-<h5 style= "text-align:center"><%= link_to 'Submit Your Own Project', new_article_path %></h5>
+<h5 style= "text-align:center"><%= link_to 'Submit Your Own Project', new_article_path, {:style=>'font:bold 20px sans-serif;'} %></h5>
 
 
 

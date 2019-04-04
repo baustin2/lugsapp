@@ -1,19 +1,23 @@
 
-<h1> Login </h1>
-
-<%= form_for(:logins, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
-<div class="field">
-  <%= form.label :password %>
-  <%= form.password_field :password %>
+<div class="row justify-content-center">
+	<h1 style="font-family:sans-serif;"> Login </h1>
 </div>
-
-<div class="field">
-    <%= form.button "Login" %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', root_path %>
+<div class="row justify-content-center">	
+	<%= form_for(:logins, local: true) do |form| %>
+	  <div class="field">
+	    <%= form.label :email %>
+	    <%= form.email_field :email %>
+	  </div>
+	<div class="field">
+	  <%= form.label :password %>
+	  <%= form.password_field :password %>
+	</div>
+	
+	<div class="field">
+	    <%= form.button "Login", {:style=>'background-color:#4F7942; color:white;', :class => "btn"} %>
+	  </div>
+	<% end %>
+</div>
+<div class="row justify-content-center">	
+	<%= link_to 'Back', root_path, {:style=>'font:bold 20px sans-serif;'} %>
+</div>
