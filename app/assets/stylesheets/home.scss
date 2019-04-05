@@ -34,7 +34,7 @@ div.container {
 
 
 .hero-image {
-	background: image-url('maxresdeafult.jpg');
+	background: image-url('maxresdefault.jpg');
 	height: 500px;
 	width: 100%;
 	background-position: center;
@@ -81,15 +81,27 @@ div.container {
 	margin: auto;
 }
 
+#featuredProductsCard a {
+	margin: auto;
+}
+
 #featuredProduct1 img {
 	height: 200px;
 	max-width: 300px;
 	margin: auto;
 }
 
+#featuredProduct1 a {
+	margin: auto;
+}
+
 #featuredProduct2 img {
 	height: 200px;
 	max-width: 300px;
+	margin: auto;
+}
+
+#featuredProduct2 a {
 	margin: auto;
 }
 
@@ -136,6 +148,10 @@ div.container {
 	margin: auto;
 }
 
+#typeRow a {
+	margin: auto;
+}
+
 #projectsRow {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -151,6 +167,10 @@ div.container {
 #projectsRow img {
 	height: 400px;
 	max-width: 550px;
+	margin: auto;
+}
+
+#projectsRow a {
 	margin: auto;
 }
 
