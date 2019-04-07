@@ -1,9 +1,8 @@
 <%= render 'layouts/header' %>
+<div style = "padding: 20px">
+<p id="notice"><%= notice %></p>
 <br>
 <h3>Search Results</h3>
-
-
-
 <div class='row' style = "margin-bottom: 30px">
 <% @results.each do |result| %>
 <div class='col-md-3' style = "border-style:solid; border-width: 1px; padding: 20px;">
@@ -24,6 +23,6 @@
  </div>
 <% end %>
 </div>
-
+</div>
 
 <%= render 'layouts/footer' %>

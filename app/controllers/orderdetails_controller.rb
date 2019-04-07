@@ -14,6 +14,7 @@ end
     @order.save
     session[:order_id] = @order.id
     redirect_to products_path
+    flash.notice = "ITEM WAS ADDED TO CART"
   end
 
   private

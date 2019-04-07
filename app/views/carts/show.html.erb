@@ -1,4 +1,5 @@
 <%= render 'layouts/header' %>
+<div style = "padding: 20px">
 <h2> Your Cart </h2>
 <div class='row' style = "margin-bottom: 30px">
 <% if @orderdetails.any? %>
@@ -8,8 +9,9 @@
     <p> Unit Price: <%= number_to_currency detail.priceEach %> | Quantity: <%= detail.quantityOrdered %> | Total Price: <%= number_to_currency (detail.priceEach * detail.quantityOrdered) %></p></div>
   <% end %>
 <% else %>
-  <p>Your shopping cart is empty.</p>
+  <p style="margin-left: 20px">Your shopping cart is empty.</p>
 <% end %>
 </div>
 <h5>Your Total: <%= number_to_currency current_order.total_price %></h5>
+</div>
 <%= render 'layouts/footer' %>

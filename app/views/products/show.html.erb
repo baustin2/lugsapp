@@ -1,4 +1,5 @@
 <%= render 'layouts/header' %>
+<div style = "padding: 20px">
 <p id="notice"><%= notice %></p>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -9,9 +10,9 @@
 
 <br>
 <h3 style="font-weight: 700;"><%= @product.productName.upcase %></h3><br>
-<div style="width: 100%; height: 550px;margin-left: 50px">
-<div style="width: 55%;height: 100%;display:inline-block;padding: 30px;border-style: solid; border-width: 1px;">
-<%= image_tag("large towing2.jpg", :alt => "towing part", id: "towing part") %>
+<div style="width: 100%; height: 40%;text-align:center">
+<div style="height: 70%;display:inline-block;border-style: solid; border-width: 1px;">
+<%= image_tag("large towing2.jpg", :alt => "towing part", id: "towing part", style: 'height:70%') %>
 </div>
 <div style="vertical-align: top;height: 100%;margin-left: 40px;display:inline-block;width: 35%;padding: 30px;border-style: solid; border-width: 1px;background-color: #E8E8E8">
 <h5>ITEM NUMBER: <%= @product.productCode %></h5>
@@ -28,11 +29,9 @@
   <%= f.hidden_field :priceEach, value: @product.buyPrice %>
   <%= f.submit "Add to cart" %>
 <% end %>
-<br>
 
 </div>
 </div>
-<br>
 <br>
 <h6 style="background-color: #e8e8e8;padding: 30px;width: 90%; margin: 0 auto"><%= sanitize(@product.productDescription) %></h6>
 
@@ -40,5 +39,6 @@
 <br>
 <br>
 
-<h5><%= link_to 'Back', products_path %></h5>
+<h5 style = "margin-left: 80px"><%= link_to 'Back', products_path %></h5>
+</div>
 <%= render 'layouts/footer' %>

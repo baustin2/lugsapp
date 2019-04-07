@@ -1,23 +1,23 @@
+<%= render 'layouts/header' %>
+<div style = "padding: 20px">
+<h1> Login </h1>
+<a href = "/customers/new"> Click here to sign-up</a>
+<p id="notice"><%= notice %></p>
+<%= form_for(:logins, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+<div class="field">
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+</div>
 
-<div class="row justify-content-center">
-	<h1 style="font-family:sans-serif;"> Login </h1>
-</div>
-<div class="row justify-content-center">	
-	<%= form_for(:logins, local: true) do |form| %>
-	  <div class="field">
-	    <%= form.label :email %>
-	    <%= form.email_field :email %>
-	  </div>
-	<div class="field">
-	  <%= form.label :password %>
-	  <%= form.password_field :password %>
-	</div>
-	
-	<div class="field">
-	    <%= form.button "Login", {:style=>'background-color:#4F7942; color:white;', :class => "btn"} %>
-	  </div>
-	<% end %>
-</div>
-<div class="row justify-content-center">	
-	<%= link_to 'Back', root_path, {:style=>'font:bold 20px sans-serif;'} %>
-</div>
+<div class="field">
+    <%= form.button "Login" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', root_path %>
+<div style = "padding: 20px">
+<%= render 'layouts/footer' %>

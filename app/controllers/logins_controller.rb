@@ -10,6 +10,7 @@ class LoginsController < ApplicationController
 
       redirect_to customer
     else
+      flash.notice = "Invalid login.  Try Again or Sign Up.  "
     redirect_to '/login'
     end
   end
